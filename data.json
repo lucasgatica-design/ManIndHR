@@ -1,0 +1,81 @@
+{
+  "_comentario": "TALLER.APP — Schema de datos de materiales y configuración. Importable/exportable desde la app.",
+  "_version": "1.0",
+  "_fecha": "2025",
+
+  "materiales": [
+    {
+      "id": "acero_carbono",
+      "nombre": "Acero al Carbono",
+      "norma": "ASTM A36 / IRAM 503",
+      "densidad_kg_m3": 7850,
+      "resistencia_traccion_mpa": 400,
+      "limite_fluencia_mpa": 250,
+      "notas": "Material estructural más común en talleres. Soldable por MMA/TIG/MIG."
+    },
+    {
+      "id": "acero_inox_304",
+      "nombre": "Acero Inoxidable AISI 304",
+      "norma": "ASTM A240",
+      "densidad_kg_m3": 7900,
+      "resistencia_traccion_mpa": 515,
+      "limite_fluencia_mpa": 205,
+      "notas": "Austenético, no magnético. Soldadura TIG con aporte ER308L. No se trata térmicamente."
+    },
+    {
+      "id": "acero_inox_316",
+      "nombre": "Acero Inoxidable AISI 316",
+      "norma": "ASTM A240",
+      "densidad_kg_m3": 7950,
+      "resistencia_traccion_mpa": 515,
+      "limite_fluencia_mpa": 210,
+      "notas": "Mayor resistencia a la corrosión que 304 por el Molibdeno. Aporte TIG: ER316L."
+    },
+    {
+      "id": "aluminio_6061",
+      "nombre": "Aluminio 6061-T6",
+      "norma": "ASTM B209",
+      "densidad_kg_m3": 2700,
+      "resistencia_traccion_mpa": 310,
+      "limite_fluencia_mpa": 276,
+      "notas": "Aluminio estructural. Soldadura TIG con aporte ER4043 o ER5356."
+    },
+    {
+      "id": "cobre",
+      "nombre": "Cobre electrolítico",
+      "norma": "ASTM B187",
+      "densidad_kg_m3": 8960,
+      "resistencia_traccion_mpa": 220,
+      "limite_fluencia_mpa": 70,
+      "notas": "Alta conductividad eléctrica y térmica. Soldadura con plata o TIG con cuidado."
+    }
+  ],
+
+  "perfiles_comerciales_arg": [
+    { "tipo": "Caño cuadrado",     "norma": "IRAM IAS U-500-171", "longitud_comercial_mm": 6000, "material": "acero_carbono" },
+    { "tipo": "Caño rectangular",  "norma": "IRAM IAS U-500-171", "longitud_comercial_mm": 6000, "material": "acero_carbono" },
+    { "tipo": "Caño redondo",      "norma": "IRAM IAS U-500-171", "longitud_comercial_mm": 6000, "material": "acero_carbono" },
+    { "tipo": "Perfil ángulo (L)", "norma": "IRAM IAS U-500-107", "longitud_comercial_mm": 6000, "material": "acero_carbono" },
+    { "tipo": "Perfil UPN",        "norma": "DIN 1026",           "longitud_comercial_mm": 6000, "material": "acero_carbono" },
+    { "tipo": "Barra redonda",     "norma": "IRAM IAS U-500-35",  "longitud_comercial_mm": 6000, "material": "acero_carbono" },
+    { "tipo": "Barra cuadrada",    "norma": "IRAM IAS U-500-35",  "longitud_comercial_mm": 6000, "material": "acero_carbono" },
+    { "tipo": "Barra plana",       "norma": "IRAM IAS U-500-35",  "longitud_comercial_mm": 6000, "material": "acero_carbono" }
+  ],
+
+  "chapas_comerciales_arg": [
+    { "tipo": "Chapa de acero laminada en frío", "norma": "IRAM-IAS U 500-97", "espesores_mm": [0.6, 0.9, 1.2, 1.5, 2.0, 2.5, 3.0], "medida_plancha_mm": [1000, 2000] },
+    { "tipo": "Chapa de acero laminada en caliente", "norma": "IRAM-IAS U 500-97", "espesores_mm": [3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.5, 16.0, 20.0, 25.0], "medida_plancha_mm": [1500, 6000] },
+    { "tipo": "Chapa inoxidable 304 2B", "norma": "ASTM A240", "espesores_mm": [0.5, 0.8, 1.0, 1.5, 2.0, 3.0, 4.0, 6.0], "medida_plancha_mm": [1000, 2000] }
+  ],
+
+  "kerf_referencias_mm": {
+    "disco_abrasivo_115mm":  2.0,
+    "disco_abrasivo_230mm":  3.0,
+    "sierra_cinta":          1.5,
+    "sierra_circular_metal": 2.5,
+    "plasma_fino":           1.5,
+    "plasma_grueso":         2.5,
+    "laser":                 0.3,
+    "oxicorte":              3.5
+  }
+}
